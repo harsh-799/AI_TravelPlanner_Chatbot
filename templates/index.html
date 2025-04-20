@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-500">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trippy - India Travel Planner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../static/indexstyle.css">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
+  <header class="flex justify-between items-center px-8 py-4 shadow-md bg-white dark:bg-gray-800 sticky top-0 z-50">
+    <div class="flex items-center gap-2 text-3xl font-bold text-blue-600">
+      <img src="../static/logo.png" class="w-[50px] h-15 object-contain" />
+      Trippy
+    </div>
+    <nav class="hidden md:flex space-x-10">
+      <a href="#hero" class="font-bold text-md hover:text-purple-600">Home</a>
+      <a href="#features" class="font-bold text-md hover:text-purple-600">Features</a>
+      <a href="#faq" class="font-bold text-md hover:text-purple-600">FAQ</a>
+    </nav>
+    <div class="space-x-2 flex items-center">
+      <button class="px-4 py-2 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"><a href="ffgf.html">Login</a></button>
+      <button class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"><a href="ffgf.html">Start Free Trial</a></button>
+      <button id="modeToggle" class="text-xl">🌙</button>
+    </div>
+  </header>
+
+  <section id="hero" class="relative h-screen overflow-hidden">
+    <div class="absolute inset-0 flex animate-slideShow">
+      <div class="min-w-full bg-cover bg-center" style="background-image: url('https://www.planetware.com/wpimages/2019/11/india-best-places-to-visit-agra.jpg');"></div>
+      <div class="min-w-full bg-cover bg-center" style="background-image: url('https://plus.unsplash.com/premium_photo-1697730421382-bc8dd92f83ba?q=80&w=2069&auto=format&fit=crop');"></div>
+      <div class="min-w-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551155311-88cda3ebe650?q=80&w=1968&auto=format&fit=crop');"></div>
+      <div class="min-w-full bg-cover bg-center" style="background-image: url('https://www.hlimg.com/images/stories/738X538/goa_1485594061e11.jpg?w=400&dpr=2.6');"></div>
+      <div class="min-w-full bg-cover bg-center" style="background-image: url('https://as2.ftcdn.net/v2/jpg/01/54/70/85/1000_F_154708525_BrEJuxgM4gGvnYjTSL9KnKzY1FK6HwAI.jpg');"></div>
+      <div class="min-w-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1542709111240-e9df0dd813b4?q=80&w=1974&auto=format&fit=crop');"></div>
+    </div>
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4">Explore the Wonders of India</h1>
+      <p class="text-lg md:text-xl text-gray-200 mb-6">Your personalized travel planner and cultural guide</p>
+      <button id="startPlanningBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-full transition">
+        Start Planning
+      </button>
+    </div>
+  </section>
+
+  <section class="py-16 px-6" id="features">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-10">Benefits of Using Trippy</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="p-6 rounded-lg shadow-2xl border border-gray-300 dark:border-gray-600 hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-2">🌍 Personalized Trip Planning</h3>
+          <p class="text-gray-600 dark:text-gray-300">Get custom itineraries tailored to your interests, budget, and travel style in seconds.</p>
+        </div>
+        <div class="p-6 rounded-lg shadow-2xl border border-gray-300 dark:border-gray-600 hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-2">⏱️ 24/7 Travel Assistant</h3>
+          <p class="text-gray-600 dark:text-gray-300">Instant answers to your travel questions anytime, anywhere - no more waiting for business hours.</p>
+        </div>
+        <div class="p-6 rounded-lg shadow-2xl border border-gray-300 dark:border-gray-600 hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-2">💰 Smart Budgeting</h3>
+          <p class="text-gray-600 dark:text-gray-300">Automatically balances splurges and savings, suggesting alternatives when prices spike.</p>
+        </div>
+        <div class="p-6 rounded-lg shadow-2xl border border-gray-300 dark:border-gray-600 hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-2">🚗 Multi-City Routing</h3>
+          <p class="text-gray-600 dark:text-gray-300">Effortlessly plan complex trips across multiple destinations with optimized routes.</p>
+        </div>
+        <div class="p-6 rounded-lg shadow-2xl border border-gray-300 dark:border-gray-600 hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-2">🧳 Packing Intelligence</h3>
+          <p class="text-gray-600 dark:text-gray-300">Custom packing lists based on destinations, weather, and planned activities.</p>
+        </div>
+        <div class="p-6 rounded-lg shadow-2xl border border-gray-300 dark:border-gray-600 hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-2">🤝 Local Expertise</h3>
+          <p class="text-gray-600 dark:text-gray-300">Discover hidden gems and authentic experiences recommended by our travel AI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="max-w-3xl mx-auto px-6 py-12 border-2 border-gray-400 m-3 dark:border-gray-100">
+    <h1 class="text-4xl font-bold text-center mb-10">Frequently Asked Questions</h1>
+    <div class="rounded-xl p-6 space-y-4" x-data="{ selected: null }">
+      <template x-for="(faq, index) in [
+        { q: 'What is Trippy?', a: 'Trippy is a smart travel chatbot and itinerary planner that helps you plan trips, discover destinations, and organize activities.' },
+        { q: 'How does Trippy help with trip planning?', a: 'Trippy generates custom itineraries, suggests places to visit, and helps you optimize your travel time.' },
+        { q: 'Can Trippy create a full itinerary for any location?', a: 'Yes, just provide your destination and duration, and Trippy builds a detailed day-by-day itinerary.' },
+        { q: 'Do I need to install anything to use Trippy?', a: 'Nope! Trippy runs directly in your browser and works instantly with no setup required.' },
+        { q: 'Can Trippy recommend places to eat and stay?', a: 'Absolutely. Trippy provides personalized suggestions for restaurants, hotels, and local experiences.' },
+        { q: 'Does Trippy support multi-destination trips?', a: 'Yes, Trippy can help plan complex trips across multiple cities or countries with ease.' },
+        { q: 'Is Trippy free to use?', a: 'Trippy offers a free version with basic features. Premium plans offer advanced itinerary tools.' },
+        { q: 'Can Trippy work without an internet connection?', a: 'An internet connection is required to fetch up-to-date travel data and recommendations.' },
+        { q: 'How accurate are the recommendations from Trippy?', a: 'We use up-to-date travel data and reviews to ensure the recommendations are accurate and reliable.' }
+      ]" :key="index">
+        <div>
+          <button 
+            @click="selected === index ? selected = null : selected = index" 
+            class="w-full text-left flex items-start space-x-4 focus:outline-none"
+          >
+            <span class="text-2xl font-bold transition-all duration-300 ease-in-out" x-text="selected === index ? '−' : '+'"></span>
+            <h2 class="font-semibold" x-text="faq.q"></h2>
+          </button>
+          <div 
+            x-show="selected === index"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2"
+            class="pl-8 pt-2 text-gray-400"
+            x-cloak
+          >
+            <p x-text="faq.a"></p>
+          </div>
+        </div>
+      </template>
+    </div>
+  </section>
+
+  <footer id="contact" class="border-t-2 border-gray-300 pt-10 pb-6 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h2 class="font-semibold text-blue-600 mb-3">About</h2>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">Contact Us</a></li>
+          <li><a href="#" class="hover:underline">Terms of Service</a></li>
+          <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+          <li><a href="#" class="hover:underline">Cookie Policy</a></li>
+          <li><a href="#" class="hover:underline">Usage Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="font-semibold text-blue-600 mb-3">Product</h2>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">Pricing</a></li>
+          <li><a href="#" class="hover:underline">Features</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="font-semibold text-blue-600 mb-3">Resources</h2>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">Blog</a></li>
+          <li><a href="#" class="hover:underline">Documentation</a></li>
+          <li><a href="#" class="hover:underline">Affiliates</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 border-t-2 border-gray-300 pt-6 text-sm text-center text-gray-500">
+      <p class="mb-2">Contact us at <a href="mailto:support@trippybot.com" class="text-blue-500 hover:underline">support@trippybot.com</a></p>
+      © 2025 Trippy Your compass to the world • Made in 🌞 India.
+    </div>
+  </footer>
+
+  
+  <!-- Chatbot Overlay -->
+  <div id="chatbotOverlay" class="fixed inset-0 z-50 hidden items-center justify-center">
+      <div class="relative bg-white w-full max-w-4xl h-[80vh] rounded-lg shadow-xl">
+          <button id="closeChatbot" class="absolute top-4 right-4 z-10 text-2xl text-gray-500 hover:text-gray-700">
+              ✖
+            </button>
+            <div id="chatbotContainer" class="h-full w-full">
+                <iframe src="/chatbot" class="w-full h-full rounded-lg"></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="../static/index.js"></script>
+</body>
+</html>

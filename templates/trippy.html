@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Planner Chatbot</title>
+  <link rel="stylesheet" href="../static/trippystyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script>
+    var greetingMessage = "{{ greeting }}";
+  </script>
+</head>
+<body>
+  <div class="chat-container">
+
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="logo-title">
+        <img src="../static/logo.png" alt="Logo" class="logo" />
+        <span class="chatbot-name">Trippy</span>
+      </div>
+      <div class="feedback-icons">
+        <i class="fa-solid fa-thumbs-up" title="Helpful"></i>
+        <i class="fas fa-thumbs-down" title="Not Helpful"></i>
+        <span id="dark-toggle" title="Toggle Dark Mode">🌙</span>
+      </div>
+    </div>
+
+    <!-- Chat messages -->
+    <div class="chat-box" id="chat-box"></div>
+
+    <!-- Input field and send button -->
+    <form id="chat-form">
+      <div class="input-group">
+        <input type="text" id="query" placeholder="Type your message..." required />
+        <button type="submit">Send</button>
+      </div>
+    </form>
+    
+  </div>
+  <script src="../static/trippy.js"></script>
+</body>
+</html>
