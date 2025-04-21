@@ -270,3 +270,16 @@
   #dark-toggle:hover {
     transform: scale(1.2);
   }
+
+  body {
+    background-image: url('https://images.pexels.com/photos/2725481/pexels-photo-2725481.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }

@@ -123,6 +123,10 @@ def nearby():
 def home():
     return render_template('index.html')
 
+@app.route('/login_signup')
+def login_signup():
+    return render_template('login_signup.html')
+
 @app.route('/chatbot')
 def chatbot():
     # Get current hour
